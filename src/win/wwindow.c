@@ -1030,7 +1030,7 @@ int _al_win_init_window(void)
    window_class.cbWndExtra = 0;
    window_class.hbrBackground = NULL;
    window_class.hCursor = NULL;
-   window_class.hIcon = NULL;
+   window_class.hIcon = LoadIcon(GetModuleHandle(NULL), TEXT("MAINICON"));  // <-- use "main" icon
    window_class.hInstance = GetModuleHandle(NULL);
    window_class.lpfnWndProc = window_callback;
    window_class.lpszClassName = TEXT("ALEX");
